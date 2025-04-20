@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations - Native American Food Access and Sovereignty Research Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/viz.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Native American Food Access and Sovereignty Research Project</h1>
+    </header>
+    
+    <div class="nav-buttons">
+        <a href="index.html"><button class="nav-button"><i class="fas fa-home"></i> HOME</button></a>
+        <a href="viz.html"><button class="nav-button active"><i class="fas fa-chart-bar"></i> VISUALIZATIONS</button></a>
+        <a href="case-studies.html"><button class="nav-button"><i class="fas fa-file-alt"></i> CASE STUDIES</button></a>
+        <a href="research-summary.html"><button class="nav-button"><i class="fas fa-search"></i> RESEARCH SUMMARY</button></a>
+        <a href="bibliography.html"><button class="nav-button"><i class="fas fa-book"></i> ANNOTATED BIBLIOGRAPHY</button></a>
+    </div>
+
+    <div class="section-navigation">
+        <h2>Sections</h2>
+        <div class="section-buttons">
+            <a href="#usda-atlas" class="section-button active">USDA FOOD ACCESS RESEARCH ATLAS</a>
+        </div>
+    </div>
+
+    <section id="usda-atlas" class="viz-section">
+        <div class="container">
+            <h2>USDA Food Access Research Atlas Analysis</h2>
+            <p class="section-description">
+                I used the <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation" target="_blank">USDA Food Access Research Atlas (FARA) Dataset</a> to conduct a geospatial analysis of food access disparities across Native American communities and surrounding areas in California. The USDA gives four definitions of "Low-Access" Census Tracts:
+            </p>
+            
+            <div class="definition-box">
+                <ol class="definition-list">
+                    <li>Low-income census tracts where a significant number (at least 500 people) or share (at least 33 percent) of the population is greater than one-half mile from the nearest supermarket, supercenter, or large grocery store for an urban area or greater than 10 miles for a rural area. Using this measure, an estimated 53.6 million people, or 17.4 percent of the U.S. population, live in tracts that are low-income and low access and are more than one-half mile or 10 miles from the nearest supermarket.</li>
+                    
+                    <li>Low-income census tracts where a significant number (at least 500 people) or share (at least 33 percent) of the population is greater than 1 mile from the nearest supermarket, supercenter, or large grocery store for an urban area or greater than 10 miles for a rural area. This measure shows that an estimated 18.8 million people, or 6.1 percent of the U.S. population, live in low-income and low access tracts and are more than 1 mile or 10 miles from a supermarket.</li>
+                    
+                    <li>Low-income census tracts where a significant number (at least 500 people) or share (at least 33 percent) of the population is greater than 1 mile from the nearest supermarket, supercenter, or large grocery store for an urban area or greater than 20 miles for a rural area. Under this measure, an estimated 17.1 million people, or 5.6 percent of the U.S. population, live in low-income and low access tracts and are more than 1 mile or 20 miles from a supermarket.</li>
+                    
+                    <li>A fourth and slightly more complex measure incorporates vehicle access directly into the measure, delineating low-income tracts where a significant number of households are located far from a supermarket and do not have access to a vehicle. This measure also includes census tracts with populations that are so remote, that even with a vehicle, driving to a supermarket may be considered a burden because of the great distance.</li>
+                </ol>
+                <div class="source-citation">Source: USDA Economic Research Service</div>
+            </div>
+            
+            <p class="section-description">
+                The FARA data is based on a 2019 list of supermarkets, the 2010 Census, and the 2014-2018 American Community Survey. To conduct my analysis, I joined in 2010 California and American Indian/Alaska Native/Native Hawaiian Area (AIANNHA) boundary files. <a href="https://ofm.wa.gov/sites/default/files/public/legacy/pop/geographic/tiger10/metadata/tribal10.html" target="_blank">The AIANNH boundary files</a> include boundaries for federal and state-recognized American Indian reservations/off-reservation trust land areas, federal and state tribal designated statistical areas, and joint use areas. For the purposes of my analysis, I have classified them all as "Tribal Areas".
+            </p>
+
+            <div class="viz-card">
+                <h3>Food Deserts and Tribal Areas in California</h3>
+                <div class="viz-image">
+                    <img src="images/ca_food_deserts_tribal_areas.png" alt="Map showing food deserts and tribal areas in California">
+                </div>
+                <div class="viz-description">
+                    <p>This map visualizes food deserts across California census tracts, highlighting tribal area boundaries in blue. I classified a census tract as a food desert if it fits any of the USDA's "Low Access" definitions. </p>
+                </div>
+            </div>
+
+            <div class="viz-card">
+                <h3>Vehicle Access Issues and Tribal Areas in California</h3>
+                <div class="viz-image">
+                    <img src="images/ca_vehicle_access_tribal_areas.png" alt="Map showing vehicle access issues and tribal areas in California">
+                </div>
+                <div class="viz-description">
+                    <p>This map visualizes the percentage of households without vehicle access across California census tracts. I calculated this by simply dividing the # of tract housing units without a vehicle by the total # of tract housing units. Unfortunately the FARA data derives the value in the numerator from the 2014-2018 ACS and the value in the denominator from 2010 US Census. This resulted in some percentages being over 100%! I hope to resolve this by replacing the total # of tract housing units with the ACS estimate. I capped the colorbar at 50% for ease of visualization.</p>
+                </div>
+            </div>
+
+            <div class="viz-card">
+                <h3>Key USDA-Identified Low Supermarket Access Areas in California</h3>
+                <div class="viz-image">
+                    <img src="images/ca_supermarket_access_key_measures.png" alt="Map showing key USDA-identified low supermarket access areas in California">
+                </div>
+                <div class="viz-description">
+                    <p>This map distinguishes amongst a number of the categories used to classify food deserts in the first map. The purpose is to understand the specific issues different low food access areas face. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="viz.js"></script>
+</body>
+</html>
