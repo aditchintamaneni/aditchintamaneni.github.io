@@ -19,7 +19,7 @@
         <a href="viz.html"><button class="nav-button active"><i class="fas fa-chart-bar"></i> VISUALIZATIONS</button></a>
         <a href="case-studies.html"><button class="nav-button"><i class="fas fa-file-alt"></i> CASE STUDIES</button></a>
         <a href="research-summary.html"><button class="nav-button"><i class="fas fa-search"></i> RESEARCH SUMMARY</button></a>
-        <a href="bibliography.html"><button class="nav-button"><i class="fas fa-book"></i> ANNOTATED BIBLIOGRAPHY</button></a>
+        <a href="bib.html"><button class="nav-button"><i class="fas fa-book"></i>BIBLIOGRAPHY</button></a>
     </div>
 
     <div class="section-navigation">
@@ -50,7 +50,7 @@
             </div>
             
             <p class="section-description">
-                The FARA data is based on a 2019 list of supermarkets, the 2010 Census, and the 2014-2018 American Community Survey. To conduct my analysis, I joined in 2010 California and American Indian/Alaska Native/Native Hawaiian Area (AIANNHA) boundary files. <a href="https://ofm.wa.gov/sites/default/files/public/legacy/pop/geographic/tiger10/metadata/tribal10.html" target="_blank">The AIANNH boundary files</a> include boundaries for federal and state-recognized American Indian reservations/off-reservation trust land areas, federal and state tribal designated statistical areas, and joint use areas. For the purposes of my analysis, I have classified them all as "Tribal Areas".
+                The FARA data is based on a 2019 list of supermarkets, the 2010 Census, and the 2014-2018 American Community Survey. To conduct my analysis, I joined in 2010 California and American Indian/Alaska Native/Native Hawaiian Area (AIANNHA) boundary files. <a href="https://ofm.wa.gov/sites/default/files/public/legacy/pop/geographic/tiger10/metadata/tribal10.html" target="_blank">The AIANNH boundary files</a> include boundaries for federal and state-recognized American Indian reservations/off-reservation trust land areas, federal and state tribal designated statistical areas, and joint use areas. For the purposes of my analysis, I have classified them all as "Tribal Areas". My code can be found <a href = "fara_analysis.html"> here</a>.
             </p>
 
             <div class="viz-card">
@@ -80,6 +80,26 @@
                 </div>
                 <div class="viz-description">
                     <p>This map distinguishes amongst a number of the categories used to classify food deserts in the first map. The purpose is to understand the specific issues different low food access areas face. </p>
+                </div>
+            </div>
+
+            <div class="viz-card">
+                <h3>Percentage of Non-tribal vs Tribal Census Tracts classified as Food Deserts</h3>
+                <div class="viz-image">
+                    <img src="images/food_desert_barplot.png" alt="Bar plot showing percentage of Non-tribal vs Tribal Census Tracts classified as Food Deserts">
+                </div>
+                <div class="viz-description">
+                    <p>A substantially larger percentage of tribal census tracts are classified as food deserts.</p>
+                </div>
+            </div>
+
+            <div class="viz-card">
+                <h3>Percentage of Non-tribal vs Tribal Census Tracts partipating in the SNAP program</h3>
+                <div class="viz-image">
+                    <img src="images/snap_program_barplot.png" alt="Bar plot showing percentage of Non-tribal vs Tribal Census Tracts particpating in the SNAP program">
+                </div>
+                <div class="viz-description">
+                    <p>SNAP (Supplemental Nutrition Assistance Program) participation rates are very similar for non-tribal and tribal census tracts, despite a substantially higher percentage of tribal census tracts being food deserts.</p>
                 </div>
             </div>
         </div>
