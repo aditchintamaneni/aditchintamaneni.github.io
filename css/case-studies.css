@@ -1,0 +1,126 @@
+/* case-studies.css - Styles specific to the case studies page */
+
+.section-navigation {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section-navigation h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.section-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-button {
+    background-color: #a679ca;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+}
+
+.section-button:hover {
+    transform: translateY(-2px);
+}
+
+.case-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 20px; 
+}
+
+.case-section h2 {
+    color: #000;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5C147C;
+}
+
+.case-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.case-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #000000;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5C147C;
+}
+
+.case-content {
+    min-height: 50px; /* For placeholder cards */
+}
+
+.case-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.case-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    .section-button {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        padding: 12px 15px;
+        margin-bottom: 5px;
+    }
+    
+    .case-card {
+        padding: 15px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .section-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .section-navigation h2 {
+        font-size: 1.3rem;
+    }
+    
+    .case-card h3 {
+        font-size: 1.2rem;
+    }
+}
