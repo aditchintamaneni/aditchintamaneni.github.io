@@ -25,7 +25,8 @@
     <div class="section-navigation">
         <h2>Sections</h2>
         <div class="section-buttons">
-            <a href="#usda-atlas" class="section-button active">USDA FOOD ACCESS RESEARCH ATLAS</a>
+            <a href="#usda-atlas" class="section-button">USDA FOOD ACCESS RESEARCH ATLAS</a>
+            <a href="#food-price-index" class="section-button">FIRST NATIONS FOOD PRICE INDEX</a>
         </div>
     </div>
 
@@ -69,7 +70,7 @@
                     <img src="images/ca_vehicle_access_tribal_areas.png" alt="Map showing vehicle access issues and tribal areas in California">
                 </div>
                 <div class="viz-description">
-                    <p>This map visualizes the percentage of households without vehicle access across California census tracts. I calculated this by simply dividing the # of tract housing units without a vehicle by the total # of tract housing units. Unfortunately the FARA data derives the value in the numerator from the 2014-2018 ACS and the value in the denominator from 2010 US Census. This resulted in some percentages being over 100%! I hope to resolve this by replacing the total # of tract housing units with the ACS estimate. I capped the colorbar at 50% for ease of visualization.</p>
+                    <p>This map visualizes the percentage of households without vehicle access across California census tracts. I calculated this by simply dividing the # of tract housing units without a vehicle by the total # of tract housing units. Unfortunately the FARA data derives the value in the numerator from the 2014-2018 ACS and the value in the denominator from 2010 US Census. This resulted in some percentages being over 100%! I capped the colorbar at 50% for ease of visualization.</p>
                 </div>
             </div>
 
@@ -105,6 +106,24 @@
         </div>
     </section>
 
-    <script src="viz.js"></script>
+    <section id="food-price-index" class="viz-section">
+        <div class="container">
+            <h2>First Nations Food Price Index Analysis</h2>
+            <p class="section-description">
+                In addition to physical access to food retailers, price disparities represent another significant barrier to food sovereignty in Native American communities. I aggregated data from the "Indian Country Food Price Index: Exploring Variation in Food Pricing Across Native Communities - A Working Paper II," published by First Nations Development Institute in 2018, into a CSV file. This study collected monthly food prices from December 2016 through November 2017 across 40 Native American communities. Researchers gathered price data for a consistent basket of food items, such as milk, bread, coffee, and chicken, from various retail outlets. Locally collected prices were then systematically compared against national average prices provided by the Consumer Index Bureau of Labor Statistics for Urban Consumers to identify and quantify disparities.
+
+            <div class="viz-card">
+                <h3>Food Price Differences Between Reservation and National Averages</h3>
+                <div class="viz-image">
+                    <img src="images/food_price_diffs.png" alt="Chart showing food price differences between reservation and national averages">
+                </div>
+                <div class="viz-description">
+                    <p>I chose to visualize the average prices of foods sold on reservations compared to their national averages. For more detailed insights at the state level, I recommend exploring the Food Price Index. Notably, for every data point, food prices on reservations were consistently higher than the national average.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/viz.js"></script>
 </body>
 </html>
